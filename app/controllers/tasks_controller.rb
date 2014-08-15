@@ -6,12 +6,12 @@ class TasksController < ApplicationController
   # GET /tasks.json
   def index
     @tasks = Task.all
+    #authorize @tasks
   end
 
   # GET /tasks/1
   # GET /tasks/1.json
   def show
-    authorize @task
   end
 
   # GET /tasks/new
@@ -21,6 +21,7 @@ class TasksController < ApplicationController
 
   # GET /tasks/1/edit
   def edit
+    authorize(@task, 'hoge?')
   end
 
   # POST /tasks

@@ -11,6 +11,7 @@ gem 'therubyracer'
 
 gem "pundit"
 gem 'devise'
+gem 'hirb'
 
 gem 'jquery-rails'
 gem 'turbolinks'
