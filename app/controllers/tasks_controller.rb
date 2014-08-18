@@ -21,7 +21,7 @@ class TasksController < ApplicationController
 
   # GET /tasks/1/edit
   def edit
-    authorize(@task, 'hoge?')
+    authorize(@task, 'admin?')
   end
 
   # POST /tasks

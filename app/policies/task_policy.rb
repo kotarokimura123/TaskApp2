@@ -1,6 +1,13 @@
 class TaskPolicy < Struct.new(:user, :task)
 
-  def hoge?
+  def admin?
+    if user.role === "admin" or task.created_user_id === user.id
+      true
+    end
+  end
+
+  def allow_all
+    true
   end
 
   def index?
